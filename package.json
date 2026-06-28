@@ -1,0 +1,43 @@
+{
+  "name": "stl-generator",
+  "version": "0.1.0",
+  "description": "A client-side library for generating STL files for 3D printing",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "stl",
+    "3d-printing",
+    "generator",
+    "browser",
+    "mesh"
+  ],
+  "author": "DarkendOne",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^3.2.4"
+  }
+}
